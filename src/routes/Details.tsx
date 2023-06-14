@@ -50,9 +50,9 @@ const Details = () => {
         <Back/>
         <h2>Explore os repositorios do usuario: {id}</h2>
         <div className={styles.repos_container}>
-        {repo && (repo as unknown as any[]).map((re) =>{
+        {repo && (repo as unknown as any[]).map((re, index) =>{
             {ghj = user(re)}
-            return <CardRepo {...ghj} />
+            return <CardRepo key={index} {...ghj} />
         })}
         </div>
     </div>
